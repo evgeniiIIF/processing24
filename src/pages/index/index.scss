@@ -1,0 +1,439 @@
+@import "../../sys/scss/settings.scss";
+@import "../../uikit/elements/elements-page/elements-page.scss";
+@import "../../uikit/tables/tables-page/tables-page.scss";
+
+//  ========= Modules ==========
+
+// @import "./modules/module/module.scss";
+// @import "./modules/module/module.scss";
+// @import "./modules/module/module.scss";
+// @import "./modules/module/module.scss";
+// @import "./modules/module/module.scss";
+// @import "./modules/module/module.scss";
+//  ========= /Modules ==========
+// .main::-webkit-scrollbar {
+//   width: 0;
+// }
+// .banner {
+//   position: relative;
+//   min-height: 100vh;
+//   height: 100%;
+
+//   &__image {
+//     position: absolute;
+//     width: 100%;
+//     height: 100%;
+//   }
+//   &__container {
+//     min-height: 100vh;
+//   }
+//   &__body {
+//     position: relative;
+//     z-index: 2;
+//     display: flex;
+//     flex-direction: column;
+//     min-height: 100vh;
+//     padding: 140px 0 18px;
+//   }
+//   &__form {
+//     flex: 1 1 auto;
+//     max-width: 380px;
+//     margin-bottom: 50px;
+//   }
+//   &__text {
+//     max-width: 297px;
+//     align-self: end;
+//     &.type-body {
+//       text-align: right;
+//     }
+//   }
+// }
+
+// @media (max-width: 380px) {
+//   .card {
+//     padding: 20px 10px 20px;
+//     border: 1px solid $dark-50;
+//     transform: scale(90%);
+//   }
+//   .banner__body {
+//     margin: 0 -30px;
+//   }
+//   .banner__text {
+//     align-self: center;
+//     &.type-body {
+//       text-align: center;
+//     }
+//   }
+// }
+
+.quick-order {
+  &__title {
+    margin-bottom: 48px;
+    @extend %type-h1;
+    @include adaptiv-font(48, 29);
+  }
+  &__form {
+    padding: 49px 192px 43px 96px;
+    @include lg-block() {
+      padding: 10px;
+    }
+  }
+}
+.form-quick-order {
+  @include mb(30px);
+
+  &__title {
+    font-weight: 700;
+    line-height: 120%;
+    color: #000000;
+    @include adaptiv-font(36, 24);
+  }
+  &__row {
+    display: flex;
+    align-items: flex-end;
+    @include mr(14px);
+
+    @include lg-block() {
+      @include mr(0);
+      @include mb(20px);
+      display: block;
+    }
+  }
+  &__name {
+    flex: 0 1 273px;
+  }
+  &__phone {
+    flex: 0 1 273px;
+  }
+  &__button {
+    flex: 0 1 258px;
+  }
+}
+
+// +++++++++++++++++++++++++++++Price
+
+.price {
+  &__title {
+    @extend %type-h2;
+    @include adaptiv-font(36, 24);
+    margin-bottom: 48px;
+    text-align: left;
+  }
+  &__table {
+    @include to(820px) {
+      overflow-y: auto;
+    }
+  }
+  & .table {
+    min-width: 775px;
+  }
+}
+// +++++++++++++++++++++++++++++Fuel-order
+
+.fuel-order {
+  &__title {
+    margin-bottom: 34px;
+    @extend %type-h2;
+  }
+
+  &__form {
+    display: flex;
+    @include lg-block {
+      display: block;
+    }
+  }
+
+  &__fields {
+    flex: 1 1 39%;
+    margin-right: 70px;
+    @include lg-block {
+      margin-right: 0;
+      margin-bottom: 40px;
+    }
+  }
+
+  &__result {
+    flex: 1 1 61%;
+    padding: 24px 40px 40px;
+    @include sm-block() {
+      padding: 5px;
+    }
+  }
+}
+.fields-fuel-order {
+  @include mb(16px);
+}
+
+.result-fuel-order {
+  &__field {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 0;
+
+    &:not(:nth-last-child(2)) {
+      border-bottom: 1px solid #e7e7e7;
+    }
+    & .title-text {
+      max-width: 346px;
+      @include sm-block() {
+        max-width: 170px;
+      }
+    }
+  }
+
+  &__title {
+    @extend %type-h7;
+  }
+
+  &__cost {
+    @extend %type-h8;
+  }
+
+  &__total-cost {
+    @extend %type-h3;
+  }
+
+  &__button {
+    display: flex;
+    justify-content: flex-start;
+    padding-top: 16px;
+    &-wrapper {
+      flex: 0 1 258px;
+    }
+  }
+}
+// +++++++++++++++++++++++++++++HowWeWork
+.blue-cards {
+  &__title {
+    @extend %type-h2;
+    margin-bottom: 48px;
+  }
+
+  &__row {
+    @include row-flex();
+    @include lg-block() {
+      @include mb(20px);
+      margin: 0 -30px;
+    }
+  }
+
+  &__column {
+    @include col();
+    @include size(4);
+    @include size-lg(12);
+  }
+
+  &__item {
+    height: 100%;
+  }
+}
+.card-blue {
+  padding: 30px;
+  background: #043c77;
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
+
+  &__icon {
+    max-width: 100%;
+  }
+
+  &__duration {
+  }
+
+  &__duration-text {
+    @extend %type-h4;
+    color: #fff;
+    margin-bottom: 17px;
+  }
+
+  &__duration-arrow {
+    max-width: 100%;
+  }
+
+  &__content {
+    color: #ffffff;
+  }
+
+  &__content-title {
+    margin-bottom: 24px;
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 26px;
+  }
+
+  &__content-text {
+    @extend %type-h8;
+    color: inherit;
+    span {
+      display: block;
+      font-size: 12px;
+      margin-top: 10px;
+    }
+  }
+}
+// +++++++++++++++++++++++++++advantages
+.advantages {
+  &__title {
+    @extend %type-h2;
+    margin-bottom: 48px;
+  }
+
+  &__row {
+    @include row-flex();
+    margin-top: -15px;
+    margin-bottom: -15px;
+  }
+
+  &__column {
+    @include col();
+    @include size(4);
+    @include size-lg(6);
+    @include size-sm(12);
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+
+  &__item {
+  }
+}
+.item-advantages {
+  display: flex;
+  &__icon {
+    width: 48px;
+    height: 48px;
+    margin-right: 19px;
+  }
+  .title-text {
+    &__title {
+      @extend %type-h4;
+      margin-bottom: 12px;
+    }
+
+    &__text {
+      @extend %type-signature;
+    }
+  }
+}
+// ++++++++++++++++++++++++++ sertificates
+.certificates {
+  background: #f9f9f9;
+
+  &__title {
+    @extend %type-h2;
+    margin-bottom: 48px;
+  }
+
+  &__row {
+    @include row-flex();
+    margin-top: -15px;
+    margin-bottom: -15px;
+  }
+
+  &__column {
+    margin-top: 15px;
+    margin-bottom: 15px;
+
+    @include col();
+    @include size(3);
+    @include to(1147px) {
+      @include size(6);
+    }
+    @include size-sm(12);
+    background: #ffffff;
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.1);
+    padding: 28px 20px;
+  }
+
+  &__item {
+    padding-top: 138%;
+  }
+}
+
+.partners {
+  &__title {
+    @extend %type-h2;
+    margin-bottom: 48px;
+  }
+
+  &__row {
+    @include row-flex();
+    margin-top: -15px;
+    margin-bottom: -15px;
+  }
+
+  &__column {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    @include sm-block() {
+      padding: 30px;
+    }
+
+    @include col();
+    @include size(3);
+    @include size-lg(6);
+    @include size-sm(12);
+  }
+
+  &__item {
+    @include sm-block() {
+      width: 100%;
+    }
+    img {
+      min-width: 100%;
+    }
+  }
+}
+// ++++++++++++++++++++reviews
+.reviews {
+  background: #f9f9f9;
+
+  &__title {
+    @extend %type-h2;
+    margin-bottom: 48px;
+  }
+
+  &__body {
+    @include row-flex();
+    margin-top: -30px;
+    margin-bottom: -30px;
+  }
+
+  &__item {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    @include col();
+    @include size(6);
+    @include size-lg(12);
+  }
+}
+.item-reviews {
+  padding: 40px;
+  @include lg-block() {
+    padding: 10px;
+  }
+  background: #fff;
+
+  &__top {
+    margin-bottom: 40px;
+
+    .title-text {
+      &__title {
+        @extend %type-h4;
+      }
+
+      &__text {
+      }
+    }
+  }
+
+  &__content {
+    @extend %type-h8;
+  }
+}
